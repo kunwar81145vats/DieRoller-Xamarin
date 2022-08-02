@@ -3,86 +3,86 @@ namespace DieRoller
 {
     public class DieClass
     { 
-        private int totalSides { get; set; }
-        private string name { get; set; }
-        private int currentSide { get; set; }
+        private int TotalSides { get; set; }
+        private string Name { get; set; }
+        private int CurrentSide { get; set; }
 
         //getter method for total sides
-        public int getTotalSides()
+        public int GetTotalSides()
         {
-            return totalSides;
+            return TotalSides;
         }
 
         //setter method for total sides
-        public void setTotalSides(int sides)
+        public void SetTotalSides(int sides)
         {
-            totalSides = sides;
+            TotalSides = sides;
         }
 
         //getter method for name
-        public string getName()
+        public string GetName()
         {
-            return name;
+            return Name;
         }
 
 
         //setter method for name
-        public void setName(string value)
+        public void SetName(string value)
         {
-            name = value;
+            Name = value;
         }
 
         //getter method for current side
-        public int getCurrentSide()
+        public int GetCurrentSide()
         {
-            return currentSide;
+            return CurrentSide;
         }
 
         //setter method for current side
-        public void setCurrentSide(int value)
+        public void SetCurrentSide(int value)
         {
-            currentSide = value;
+            CurrentSide = value;
         }
 
         //Default constructor creates 6 sided Die
         public DieClass()
         {
-            currentSide = 1;
-            name = "d6";
-            totalSides = 6;
+            CurrentSide = 1;
+            Name = "d6";
+            TotalSides = 6;
         }
 
         //Constructor with 1 parameter to set only total sides
         public DieClass(int sides)
         {
-            currentSide = 1;
-            name = "d" + sides;
-            totalSides = sides;
+            CurrentSide = 1;
+            Name = "d" + sides;
+            TotalSides = sides;
         }
 
         //Constructor with 2 parameters to set total sides and name
         public DieClass(int sides, string nameValue)
         {
-            currentSide = 1;
-            name = nameValue;
-            totalSides = sides;
+            CurrentSide = 1;
+            Name = nameValue;
+            TotalSides = sides;
         }
 
         //Constructor with 3 parameters to set total sides, name and current side
         public DieClass(int sides, string nameValue, int current)
         {
-            currentSide = current;
-            name = nameValue;
-            totalSides = sides;
+            CurrentSide = current;
+            Name = nameValue;
+            TotalSides = sides;
         }
 
         //Roll random side
-        public int rollDie()
+        public int RollDie()
         {
             var rnd = new Random();
-            currentSide = rnd.Next(1, totalSides);
+            CurrentSide = rnd.Next(1, TotalSides);
 
-            return currentSide;
+            return CurrentSide;
         }
     }
 }

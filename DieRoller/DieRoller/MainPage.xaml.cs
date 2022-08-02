@@ -21,13 +21,13 @@ namespace DieRoller
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            if(die.getCurrentSide() > die.getTotalSides())
+            if (die.GetCurrentSide() > die.GetTotalSides())
             {
-                 App.Current.MainPage.DisplayAlert("Alert", "Current side should be less than total number of sides.", "OK");
+                App.Current.MainPage.DisplayAlert("Alert", "Current side should be less than total number of sides.", "OK");
             }
             else
             {
-                int result = die.rollDie();
+                int result = die.RollDie();
                 ResultValue = result.ToString();
                 OnPropertyChanged(nameof(ResultValue));
             }
@@ -36,19 +36,19 @@ namespace DieRoller
         void name_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             string name = ((Entry)sender).Text;
-            die.setName(name);
+            die.SetName(name);
         }
 
         void sides_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             int sides = int.Parse(((Entry)sender).Text);
-            die.setTotalSides(sides);
+            die.SetTotalSides(sides);
         }
 
         void currentSide_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             int current = int.Parse(((Entry)sender).Text);
-            die.setCurrentSide(current);
+            die.SetCurrentSide(current);
         }
     }
 }
