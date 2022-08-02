@@ -22,7 +22,7 @@ namespace DieRollTests
         public void TestOneParameterConstructor(int sides)
         {
             die = new DieClass(sides);
-            sides.Should().Equals(die.GetTotalSides());
+            die.GetTotalSides().Should().Be(sides);
         }
 
         [TestMethod]
@@ -32,8 +32,8 @@ namespace DieRollTests
         public void TestTwoParameterConstructorSides(int sides, string name)
         {
             die = new DieClass(sides, name);
-            sides.Should().Equals(die.GetTotalSides());
-            name.Should().Equals(die.GetName());
+            die.GetTotalSides().Should().Be(sides);
+            die.GetName().Should().Be(name);
         }
 
         [TestMethod]
@@ -44,9 +44,9 @@ namespace DieRollTests
         {
             die = new DieClass(sides, name, currentSide);
 
-            sides.Should().Equals(die.GetTotalSides());
-            name.Should().Equals(die.GetName());
-            currentSide.Should().Equals(die.GetCurrentSide());
+            die.GetTotalSides().Should().Be(sides);
+            die.GetName().Should().Be(name);
+            die.GetCurrentSide().Should().Be(currentSide);
         }
 
         [TestMethod]
@@ -57,14 +57,8 @@ namespace DieRollTests
         {
             die = new DieClass(sides);
             die.RollDie();
-            if (die.GetCurrentSide() <= die.GetTotalSides())
-            {
-                return;
-            }
-            else
-            {
-                Assert.Fail();
-            }
+
+            die.GetCurrentSide().Should().BeInRange(1, die.GetTotalSides());
         }
 
 
