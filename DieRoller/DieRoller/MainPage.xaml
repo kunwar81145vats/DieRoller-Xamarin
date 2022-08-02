@@ -8,15 +8,15 @@
             <Label Text="Die Roller" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Enter die name" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="name" Text="" />
+        <Entry x:Name="name" Text="" TextChanged="name_TextChanged" Padding="30,10,30,10"/>
         <Label Text="Enter number of sides" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="sides" Text="" />
+        <Entry x:Name="sides" Text="" Keyboard="Numeric" TextChanged="sides_TextChanged" Padding="30,10,30,10"/>
         <Label Text="Enter current side up" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="currentSide" Text="" />
+        <Entry x:Name="currentSide" Text="" Keyboard="Numeric" TextChanged="currentSide_TextChanged" Padding="30,10,30,10"/>
 
         <Button Text="Roll" Clicked="Button_Clicked"/>
         <Label Text="Result" FontSize="Title" HorizontalTextAlignment="Center"/>
-        <Label Text="6" FontSize="Title" HorizontalTextAlignment="Center"/>
+        <Label x:Name="resultLabel" Text="{Binding ResultValue}" FontSize="Title" HorizontalTextAlignment="Center"/>
 
     </StackLayout>
 
