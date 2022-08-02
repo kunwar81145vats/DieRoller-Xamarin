@@ -80,9 +80,9 @@ namespace DieRoller
         public int rollDie()
         {
             var rnd = new Random();
-            var newNum = rnd.Next(1, totalSides);
+            currentSide = rnd.Next(1, totalSides);
 
-            return newNum;
+            return currentSide;
         }
     }
 }
