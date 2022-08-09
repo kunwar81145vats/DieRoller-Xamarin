@@ -12,12 +12,12 @@
 
     <StackLayout Orientation="Horizontal" Spacing="2" Padding="2" RadioButtonGroup.GroupName="dice">
 
-        <RadioButton Content="d4" Value="4" HorizontalOptions="FillAndExpand" AutomationId="d4" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True"/>
-        <RadioButton Content="d6" Value="6" HorizontalOptions="FillAndExpand" AutomationId="d6" CheckedChanged="RadioButton_CheckedChanged"/>
-        <RadioButton Content="d8" Value="8" HorizontalOptions="FillAndExpand" AutomationId="d8" CheckedChanged="RadioButton_CheckedChanged"/>
-        <RadioButton Content="d10" Value="10" HorizontalOptions="FillAndExpand" AutomationId="d10" CheckedChanged="RadioButton_CheckedChanged"/>
-        <RadioButton Content="d12" Value="12" HorizontalOptions="FillAndExpand" AutomationId="d12" CheckedChanged="RadioButton_CheckedChanged"/>
-        <RadioButton Content="d20" Value="20" HorizontalOptions="FillAndExpand" AutomationId="d20" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d4" Value="4" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True"/>
+        <RadioButton Content="d6" Value="6" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d8" Value="8" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d10" Value="10" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d12" Value="12" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d20" Value="20" HorizontalOptions="FillAndExpand" CheckedChanged="RadioButton_CheckedChanged"/>
 
     </StackLayout>
 

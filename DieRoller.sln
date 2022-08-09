@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DieRoller", "DieRoller\DieR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DieRollTests", "DieRollTests\DieRollTests.csproj", "{FAEA692F-DB38-466F-97C4-5BBDA47419F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestApp.UITests", "..\..\..\Downloads\UITestSampleApp-main\Src\UITestSampleApp.UITests\UITestApp.UITests.csproj", "{B8C47BDD-0736-481B-847E-372F14A40303}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestApp", "UITestsApp\UITestApp.csproj", "{B8C47BDD-0736-481B-847E-372F14A40303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

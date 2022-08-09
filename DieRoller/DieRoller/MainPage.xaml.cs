@@ -36,7 +36,6 @@ namespace DieRoller
             RadioButton radio = sender as RadioButton;
             string value = radio.Value.ToString();
             totalSides = int.Parse(value);
-            Console.Out.WriteLine(totalSides);
         }
 
         void Button_Clicked_1(System.Object sender, System.EventArgs e)
