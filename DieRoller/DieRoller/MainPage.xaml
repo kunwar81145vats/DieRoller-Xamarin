@@ -7,18 +7,39 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Die Roller" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="Enter die name" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="name" Text="" TextChanged="name_TextChanged"/>
-        <Label Text="Enter number of sides" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="sides" Text="" Keyboard="Numeric" TextChanged="sides_TextChanged"/>
-        <Label Text="Enter current side up" FontSize="16" Padding="30,10,30,10"/>
-        <Entry x:Name="currentSide" Text="" Keyboard="Numeric" TextChanged="currentSide_TextChanged"/>
+<StackLayout>
+    <Label Text="Select die" Margin="20" TextColor="Black" FontSize="30" />
 
-        <Button Text="Roll" Clicked="Button_Clicked"/>
-        <Label Text="Result" FontSize="Title" HorizontalTextAlignment="Center"/>
-        <Label Text="{Binding ResultValue}" FontSize="Title" HorizontalTextAlignment="Center"/>
+    <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
+
+        <RadioButton Content="d4" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d6" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d8" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d10" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d12" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d20" GroupName="dice" HorizontalOptions="FillAndExpand"/>
 
     </StackLayout>
+
+</StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
+
+            <Button Text="Roll once" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Roll twice" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand"/>
+
+        </StackLayout>
+
+        <Label Text="Results" FontSize="Title" HorizontalTextAlignment="Center"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
+
+            <Label Text="{Binding ResultValue}" FontSize="Title" BackgroundColor="Firebrick" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding ResultValue}" FontSize="Title" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+ </StackLayout>
 
 </ContentPage>
 
