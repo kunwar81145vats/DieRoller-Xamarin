@@ -10,8 +10,10 @@ namespace DieRoller
 {
     public partial class MainPage : ContentPage
     {
-        DieClass die = new DieClass();
         public string ResultValue { get; set; }
+        public string ResultValueTwo { get; set; }
+
+        public int totalSides = 4;
 
         public MainPage()
         {
@@ -21,34 +23,33 @@ namespace DieRoller
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            if (die.GetCurrentSide() > die.GetTotalSides())
-            {
-                App.Current.MainPage.DisplayAlert("Alert", "Current side should be less than total number of sides.", "OK");
-            }
-            else
-            {
-                int result = die.RollDie();
-                ResultValue = result.ToString();
-                OnPropertyChanged(nameof(ResultValue));
-            }
+            DieClass die = new DieClass();
+
+
+            int result = die.RollDie();
+            ResultValue = result.ToString();
+            OnPropertyChanged(nameof(ResultValue));
         }
 
-        void name_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
+        void RadioButton_CheckedChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
         {
-            string name = ((Entry)sender).Text;
-            die.SetName(name);
+            RadioButton radio = sender as RadioButton;
+            string value = radio.Value.ToString();
+            totalSides = int.Parse(value);
+            Console.Out.WriteLine(totalSides);
         }
 
-        void sides_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
+        void Button_Clicked_1(System.Object sender, System.EventArgs e)
         {
-            int sides = int.Parse(((Entry)sender).Text);
-            die.SetTotalSides(sides);
-        }
+            DieClass die = new DieClass();
 
-        void currentSide_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
-        {
-            int current = int.Parse(((Entry)sender).Text);
-            die.SetCurrentSide(current);
+
+            int result = die.RollDie();
+            int result2 = die.RollDie();
+            ResultValue = result.ToString();
+            ResultValueTwo = result2.ToString();
+            OnPropertyChanged(nameof(ResultValue));
+            OnPropertyChanged(nameof(ResultValueTwo));
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DieRoller", "DieRoller\DieR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DieRollTests", "DieRollTests\DieRollTests.csproj", "{FAEA692F-DB38-466F-97C4-5BBDA47419F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestApp.UITests", "..\..\..\Downloads\UITestSampleApp-main\Src\UITestSampleApp.UITests\UITestApp.UITests.csproj", "{B8C47BDD-0736-481B-847E-372F14A40303}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FAEA692F-DB38-466F-97C4-5BBDA47419F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAEA692F-DB38-466F-97C4-5BBDA47419F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAEA692F-DB38-466F-97C4-5BBDA47419F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C47BDD-0736-481B-847E-372F14A40303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C47BDD-0736-481B-847E-372F14A40303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C47BDD-0736-481B-847E-372F14A40303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C47BDD-0736-481B-847E-372F14A40303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

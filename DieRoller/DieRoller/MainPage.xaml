@@ -8,16 +8,16 @@
             <Label Text="Die Roller" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 <StackLayout>
-    <Label Text="Select die" Margin="20" TextColor="Black" FontSize="30" />
+    <Label Text="Select die" Padding="20" TextColor="Black" FontSize="30" />
 
-    <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
+    <StackLayout Orientation="Horizontal" Spacing="2" Padding="2" RadioButtonGroup.GroupName="dice">
 
-        <RadioButton Content="d4" GroupName="dice" HorizontalOptions="FillAndExpand"/>
-        <RadioButton Content="d6" GroupName="dice" HorizontalOptions="FillAndExpand"/>
-        <RadioButton Content="d8" GroupName="dice" HorizontalOptions="FillAndExpand"/>
-        <RadioButton Content="d10" GroupName="dice" HorizontalOptions="FillAndExpand"/>
-        <RadioButton Content="d12" GroupName="dice" HorizontalOptions="FillAndExpand"/>
-        <RadioButton Content="d20" GroupName="dice" HorizontalOptions="FillAndExpand"/>
+        <RadioButton Content="d4" Value="4" HorizontalOptions="FillAndExpand" AutomationId="d4" CheckedChanged="RadioButton_CheckedChanged" IsChecked="True"/>
+        <RadioButton Content="d6" Value="6" HorizontalOptions="FillAndExpand" AutomationId="d6" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d8" Value="8" HorizontalOptions="FillAndExpand" AutomationId="d8" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d10" Value="10" HorizontalOptions="FillAndExpand" AutomationId="d10" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d12" Value="12" HorizontalOptions="FillAndExpand" AutomationId="d12" CheckedChanged="RadioButton_CheckedChanged"/>
+        <RadioButton Content="d20" Value="20" HorizontalOptions="FillAndExpand" AutomationId="d20" CheckedChanged="RadioButton_CheckedChanged"/>
 
     </StackLayout>
 
@@ -25,8 +25,8 @@
 
         <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
 
-            <Button Text="Roll once" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Roll twice" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Roll once" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand" AutomationId="rollOnce"/>
+            <Button Text="Roll twice" Clicked="Button_Clicked_1" HorizontalOptions="FillAndExpand" AutomationId="rollTwice"/>
 
         </StackLayout>
 
@@ -34,8 +34,8 @@
 
         <StackLayout Orientation="Horizontal" Spacing="2" Padding="2">
 
-            <Label Text="{Binding ResultValue}" FontSize="Title" BackgroundColor="Firebrick" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
-            <Label Text="{Binding ResultValue}" FontSize="Title" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding ResultValue}" FontSize="Title" BackgroundColor="Firebrick" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" AutomationId="resultOne"/>
+            <Label Text="{Binding ResultValueTwo}" FontSize="Title" BackgroundColor="Firebrick" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" AutomationId="resultTwo"/>
 
         </StackLayout>
 
